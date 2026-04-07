@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Opticanew — Детектор</title>
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+  <link rel="stylesheet" href="./styles/detector.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="shell">
+      <div class="screen">
+        <header class="topbar">
+          <div class="brand">
+            <div class="dot"></div>
+            <b>OPTICANEW</b>
+          </div>
+          <a class="ghost" href="./index.html">назад</a>
+        </header>
+
+        <section class="hero compact">
+          <div class="eyebrow">линза давления</div>
+          <h1 class="compact-title">Проверить, где начинается давление</h1>
+          <p class="sub">Вставь фразу, заголовок или экранную формулировку.</p>
+        </section>
+
+        <section class="main detector-main">
+          <div class="lens-card small-lens-card">
+            <div class="lens small"></div>
+            <div class="lens-line"></div>
+            <div class="floating small-floating">
+              <small>результат</small>
+              <b id="detectorFloatTitle">Ничего не найдено</b>
+              <div class="pills" id="detectorFloatPills"></div>
+            </div>
+          </div>
+
+          <div class="toolbox">
+            <div class="toolbox-top">
+              <h2>Детектор манипуляции</h2>
+              <div class="status" id="statusBadge">низкое</div>
+            </div>
+
+            <div class="modes">
+              <div class="mode active">новость</div>
+              <div class="mode">реклама</div>
+              <div class="mode">интерфейс</div>
+            </div>
+
+            <textarea id="input" placeholder="Например: Только сегодня вы можете не потерять результат. Не упустите шанс."></textarea>
+
+            <div class="result" id="result">
+              <div class="label">результат</div>
+              <div class="title">Ничего не найдено</div>
+              <p>Вставь текст и нажми кнопку ниже.</p>
+            </div>
+
+            <button class="cta" id="analyzeBtn">Проверить текст</button>
+            <div class="deep-link">открыть разбор →</div>
+          </div>
+        </section>
+
+        <div></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./scripts/detector.js"></script>
+</body>
+</html>
