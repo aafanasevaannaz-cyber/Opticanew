@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Opticanew — v4</title>
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+  <link rel="stylesheet" href="./styles/detector.css" />
+  <link rel="stylesheet" href="./styles/page-v2.css" />
+  <link rel="stylesheet" href="./styles/page-v4.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="shell">
+      <div class="screen tight-v4">
+        <header class="topbar">
+          <div class="brand">
+            <div class="dot"></div>
+            <b id="brandName">OPTICANEW</b>
+          </div>
+          <a class="ghost watermark-link" href="https://max.ru/join/XpltO0Df9fj98TC2dM8x6iWS67phdvG6_Eai4-Jh73M" target="_blank" rel="noopener noreferrer">@smeshenieoptiki</a>
+        </header>
+
+        <section class="hero hero-v4">
+          <div class="eyebrow" id="heroEyebrow">скрытое давление</div>
+          <h1 id="heroTitle">Увидеть, как на тебя давят текстом</h1>
+          <p class="sub" id="heroSubtitle"></p>
+        </section>
+
+        <section class="main home-main-v4">
+          <a class="lens-link" href="./detector-v4.html">
+            <div class="lens-card hero-lens-v4">
+              <div class="lens"></div>
+              <div class="lens-line"></div>
+              <div class="result-card-inline v4">
+                <small>линза давления</small>
+                <b id="floatTitle">Найдено 2 приёма</b>
+                <div class="pills" id="floatPills"></div>
+              </div>
+            </div>
+          </a>
+
+          <div class="toolbox compact-toolbox v4">
+            <div class="field" id="demoText"></div>
+            <div class="quick-pills" id="signals"></div>
+            <div class="home-actions-v4">
+              <a class="cta" href="./detector-v4.html" id="primaryCta">Проверить текст</a>
+              <a class="ghost-button" href="./detector-v4.html?example=urgency" id="secondaryCta">Разобрать пример</a>
+            </div>
+            <div class="micro-note">Линза и теги работают как вход в детектор.</div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./scripts/render-home-v4.js"></script>
+</body>
+</html>
