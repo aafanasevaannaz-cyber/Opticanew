@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Opticanew — Детектор v6</title>
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+  <link rel="stylesheet" href="./styles/detector.css" />
+  <link rel="stylesheet" href="./styles/page-v6.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="shell">
+      <div class="screen tight-v6">
+        <header class="topbar">
+          <div class="brand">
+            <div class="dot"></div>
+            <b>OPTICANEW</b>
+          </div>
+          <a class="ghost watermark-link" href="https://max.ru/join/XpltO0Df9fj98TC2dM8x6iWS67phdvG6_Eai4-Jh73M" target="_blank" rel="noopener noreferrer">@smeshenieoptiki</a>
+        </header>
+
+        <section class="hero hero-v6 compact">
+          <div class="eyebrow">линза давления</div>
+          <h1 class="compact-title">Проверить, где начинается давление</h1>
+          <p class="sub">Вставь фразу или открой готовый пример.</p>
+        </section>
+
+        <section class="main detector-main-v6">
+          <div class="lens-stage-v6">
+            <div class="lens-card hero-lens-v6">
+              <div class="lens small"></div>
+              <div class="lens-line"></div>
+            </div>
+            <div class="lens-label-v6" id="detectorFloatTitle">Ничего не найдено</div>
+          </div>
+
+          <div class="toolbox v6detector">
+            <div class="toolbox-top">
+              <h2>Детектор манипуляции</h2>
+              <div class="status" id="statusBadge">низкое</div>
+            </div>
+
+            <div class="mode-grid-v6">
+              <button class="mode active" data-mode="news" type="button">новость</button>
+              <button class="mode" data-mode="ad" type="button">реклама</button>
+              <button class="mode" data-mode="ui" type="button">интерфейс</button>
+            </div>
+
+            <textarea id="input" placeholder="Например: Только сегодня вы можете не потерять результат. Не упустите шанс."></textarea>
+            <div class="feedback" id="feedback"></div>
+
+            <div class="result" id="result">
+              <div class="label">результат</div>
+              <div class="title">Ничего не найдено</div>
+              <p>Вставь текст или открой готовый пример.</p>
+            </div>
+
+            <button class="cta" id="analyzeBtn">Проверить текст</button>
+            <div class="next-step-link" id="nextStep">открыть разбор →</div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./scripts/detector-v4.js"></script>
+</body>
+</html>
