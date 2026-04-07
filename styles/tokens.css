@@ -1,0 +1,36 @@
+:root{
+  --bg-1:#17100d;
+  --bg-2:#080808;
+
+  --text:#f5eee7;
+  --text-soft:rgba(245,238,231,.74);
+  --text-faint:rgba(245,238,231,.46);
+
+  --line:rgba(255,255,255,.08);
+  --panel:rgba(255,255,255,.045);
+  --panel-2:rgba(255,255,255,.018);
+
+  --accent:#ddb48a;
+  --accent-soft:rgba(221,180,138,.12);
+  --accent-border:rgba(221,180,138,.22);
+
+  --warn-bg:rgba(214,165,112,.15);
+  --warn-text:#efc89b;
+  --danger-bg:rgba(186,103,74,.16);
+  --danger-text:#e4ad9c;
+  --ok-bg:rgba(114,146,109,.16);
+  --ok-text:#bdd0b8;
+
+  --radius-shell:26px;
+  --radius-xl:22px;
+  --radius-lg:18px;
+  --radius-md:14px;
+  --radius-pill:999px;
+
+  --shadow:0 24px 80px rgba(0,0,0,.42);
+
+  --btn-h:48px;
+
+  --font-main:Inter, Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display:"Cormorant Garamond", Georgia, serif;
+}
