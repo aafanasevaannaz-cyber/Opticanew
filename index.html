@@ -1,60 +1,47 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Opticanew</title>
-  <link rel="stylesheet" href="./styles/tokens.css" />
-  <link rel="stylesheet" href="./styles/base.css" />
-  <link rel="stylesheet" href="./styles/layout.css" />
-  <link rel="stylesheet" href="./styles/components.css" />
-  <link rel="stylesheet" href="./styles/detector.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Opticanew</title>
+<link rel="stylesheet" href="./styles/tokens.css" />
+<link rel="stylesheet" href="./styles/base.css" />
+<link rel="stylesheet" href="./styles/components.css" />
+<link rel="stylesheet" href="./styles/page-v7.css" />
 </head>
 <body>
-  <main class="app">
-    <section class="shell">
-      <div class="screen">
-        <header class="topbar">
-          <div class="brand">
-            <div class="dot"></div>
-            <b id="brandName">OPTICANEW</b>
-          </div>
-          <a class="ghost" href="#" id="telegramLabel">telegram ↗</a>
-        </header>
-
-        <section class="hero">
-          <div class="eyebrow" id="heroEyebrow">скрытое давление</div>
-          <h1 id="heroTitle">Увидеть, как на тебя давят текстом</h1>
-          <p class="sub" id="heroSubtitle"></p>
-        </section>
-
-        <section class="main">
-          <div class="lens-card">
-            <div class="lens"></div>
-            <div class="lens-line"></div>
-            <div class="floating">
-              <small>линза давления</small>
-              <b id="floatTitle">Ничего не найдено</b>
-              <div class="pills" id="floatPills"></div>
-            </div>
-          </div>
-
-          <div class="toolbox home-toolbox">
-            <div class="pills" id="signals"></div>
-            <div class="field" id="demoText"></div>
-            <div class="button-row">
-              <a class="cta" href="./detector.html" id="primaryCta">Проверить текст</a>
-              <a class="ghost-button" href="#" id="secondaryCta">Разобрать пример</a>
-            </div>
-            <div class="entry-grid" id="entryCards"></div>
-          </div>
-        </section>
-
-        <div></div>
-      </div>
-    </section>
-  </main>
-
-  <script type="module" src="./scripts/render-home.js"></script>
+<main class="app">
+<section class="shell">
+<div class="screen tight-v7">
+<header class="topbar">
+<div class="brand"><div class="dot"></div><b>OPTICANEW</b></div>
+<a class="ghost watermark-link" href="https://max.ru/join/XpltO0Df9fj98TC2dM8x6iWS67phdvG6_Eai4-Jh73M" target="_blank" rel="noopener noreferrer">@smeshenieoptiki</a>
+</header>
+<section class="hero hero-v7">
+<div class="eyebrow">скрытое давление</div>
+<h1>Увидеть давление</h1>
+<p class="sub">Фразы давят через страх, срочность и стыд.</p>
+</section>
+<section class="main home-main-v7">
+<div class="lens-stage-v7">
+<div class="lens-card hero-lens-v7">
+<div class="lens"></div>
+<div class="lens-line"></div>
+</div>
+<div class="lens-label-v7">Линза — визуальный центр.</div>
+</div>
+<div class="toolbox v7">
+<a class="cta" href="./detector.html">Проверить текст</a>
+<div class="entry-chips-v7">
+<a class="entry-chip-v7 fear" href="./detector.html?e=fear">страх</a>
+<a class="entry-chip-v7 urgency" href="./detector.html?e=urgency">срочность</a>
+<a class="entry-chip-v7 guilt" href="./detector.html?e=guilt">стыд</a>
+<a class="entry-chip-v7 choice" href="./detector.html?e=choice">псевдовыбор</a>
+</div>
+</div>
+</section>
+</div>
+</section>
+</main>
 </body>
 </html>

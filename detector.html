@@ -1,74 +1,57 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Opticanew — Детектор</title>
-  <link rel="stylesheet" href="./styles/tokens.css" />
-  <link rel="stylesheet" href="./styles/base.css" />
-  <link rel="stylesheet" href="./styles/layout.css" />
-  <link rel="stylesheet" href="./styles/components.css" />
-  <link rel="stylesheet" href="./styles/detector.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Detector</title>
+<link rel="stylesheet" href="./styles/tokens.css" />
+<link rel="stylesheet" href="./styles/base.css" />
+<link rel="stylesheet" href="./styles/components.css" />
+<link rel="stylesheet" href="./styles/page-v7.css" />
 </head>
 <body>
-  <main class="app">
-    <section class="shell">
-      <div class="screen">
-        <header class="topbar">
-          <div class="brand">
-            <div class="dot"></div>
-            <b>OPTICANEW</b>
-          </div>
-          <a class="ghost" href="./index.html">назад</a>
-        </header>
-
-        <section class="hero compact">
-          <div class="eyebrow">линза давления</div>
-          <h1 class="compact-title">Проверить, где начинается давление</h1>
-          <p class="sub">Вставь фразу, заголовок или экранную формулировку.</p>
-        </section>
-
-        <section class="main detector-main">
-          <div class="lens-card small-lens-card">
-            <div class="lens small"></div>
-            <div class="lens-line"></div>
-            <div class="floating small-floating">
-              <small>результат</small>
-              <b id="detectorFloatTitle">Ничего не найдено</b>
-              <div class="pills" id="detectorFloatPills"></div>
-            </div>
-          </div>
-
-          <div class="toolbox">
-            <div class="toolbox-top">
-              <h2>Детектор манипуляции</h2>
-              <div class="status" id="statusBadge">низкое</div>
-            </div>
-
-            <div class="modes">
-              <div class="mode active">новость</div>
-              <div class="mode">реклама</div>
-              <div class="mode">интерфейс</div>
-            </div>
-
-            <textarea id="input" placeholder="Например: Только сегодня вы можете не потерять результат. Не упустите шанс."></textarea>
-
-            <div class="result" id="result">
-              <div class="label">результат</div>
-              <div class="title">Ничего не найдено</div>
-              <p>Вставь текст и нажми кнопку ниже.</p>
-            </div>
-
-            <button class="cta" id="analyzeBtn">Проверить текст</button>
-            <div class="deep-link">открыть разбор →</div>
-          </div>
-        </section>
-
-        <div></div>
-      </div>
-    </section>
-  </main>
-
-  <script type="module" src="./scripts/detector.js"></script>
+<main class="app">
+<section class="shell">
+<div class="screen tight-v7">
+<header class="topbar">
+<div class="brand"><div class="dot"></div><b>OPTICANEW</b></div>
+<a class="ghost watermark-link" href="https://max.ru/join/XpltO0Df9fj98TC2dM8x6iWS67phdvG6_Eai4-Jh73M" target="_blank" rel="noopener noreferrer">@smeshenieoptiki</a>
+</header>
+<section class="hero hero-v7">
+<div class="eyebrow">линза давления</div>
+<h1>Проверить текст</h1>
+<p class="sub">Вставь фразу и посмотри, где начинается давление.</p>
+</section>
+<section class="main detector-main-v7">
+<div class="toolbox v7detector">
+<textarea id="input" placeholder="Например: Только сегодня, не упусти шанс"></textarea>
+<div class="feedback" id="feedback"></div>
+<div class="example-row">
+<button class="example-chip" onclick="setExample('fear')">страх</button>
+<button class="example-chip" onclick="setExample('urgency')">срочность</button>
+</div>
+<button class="cta" onclick="analyze()">Проверить</button>
+<div class="feedback" id="result"></div>
+</div>
+</section>
+</div>
+</section>
+</main>
+<script>
+function setExample(type){
+const input=document.getElementById('input');
+if(type==='fear')input.value='Вы потеряете результат если не сделаете сейчас';
+if(type==='urgency')input.value='Только сегодня, осталось 2 места';
+}
+function analyze(){
+const text=document.getElementById('input').value.toLowerCase();
+const result=document.getElementById('result');
+if(!text){result.innerText='вставь текст';return}
+if(text.includes('сегодня')||text.includes('сейчас')||text.includes('осталось')){result.innerText='срочность';return}
+if(text.includes('потеря')||text.includes('не сделаете')||text.includes('рискуете')){result.innerText='страх';return}
+result.innerText='явного давления нет';
+}
+const params=new URLSearchParams(location.search);const e=params.get('e');if(e){setExample(e)}
+</script>
 </body>
 </html>
